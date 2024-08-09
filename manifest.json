@@ -1,0 +1,57 @@
+{
+    "manifest_version": 2,
+    "name": "OpenPGP Alias Updater",
+    "description": "Updates the OpenPGP Alias file from a server",
+    "version": "0.4",
+    "author": "Protection International",
+    "applications": {
+        "gecko": {
+            "id": "noreply-tb@protectioninternational.org",
+            "strict_min_version": "115.0",
+            "strict_max_version": "115.*"
+        }
+    },
+    "background": {
+        "scripts": [ 
+        	"scripts/common.js",
+        	"scripts/background.js" 
+        ]
+    },
+    "permissions": [
+		"storage",
+		"downloads"
+    ],
+    "icons": {
+        "64": "images/openpgp-alias-updater.svg",
+        "32": "images/openpgp-alias-updater.svg",
+        "16": "images/openpgp-alias-updater.svg"
+    },
+    "options_ui": {
+      "page": "options/options.html",
+      "open_in_tab": false,
+      "browser_style": true
+    },
+    "compose_action": {
+    	"default_area": "maintoolbar",
+			"default_label": "",
+			"default_title": "Update OpenPGP-Alias File",
+			"default_icon" : "images/openpgp-alias-updater_bw.svg"
+    },
+	
+"experiment_apis": {
+    "moveFile": {
+      "schema": "schema.json",
+      "parent": {
+        "scopes": [
+          "addon_parent"
+        ],
+        "paths": [
+          [
+            "moveFile"
+          ]
+        ],
+        "script": "implementation.js"
+      }
+    }
+  }
+}

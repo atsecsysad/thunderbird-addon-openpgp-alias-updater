@@ -1,0 +1,22 @@
+[
+  {
+    "namespace": "moveFile",
+    "functions": [
+      {
+        "name": "moveFile",
+        "type": "function",
+        "async": true,
+        "parameters": [
+          {
+            "name": "sourcePath",
+            "type": "string"
+          },
+          {
+            "name": "destinationPath",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]
